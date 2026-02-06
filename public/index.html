@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>URL Shortner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise"></div>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-title">URL Shortner</span>
+        <span class="brand-sub">created by amit</span>
+      </div>
+      <div class="top-actions">
+        <button class="ghost icon-button" id="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <button class="ghost">Docs</button>
+        <button class="primary">Get Started</button>
+      </div>
+    </header>
+
+    <main class="hero">
+      <section class="hero-text">
+        <p class="eyebrow">Professional URL shortener</p>
+        <h1>Short links that look sharp and convert fast.</h1>
+        <p class="lead">
+          Paste a long URL, get a clean short link instantly, and share it with confidence.
+          Reliable, minimal, and built for real customers.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value">Fast</span>
+            <span class="stat-label">Instant creation</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">Clean</span>
+            <span class="stat-label">Easy to remember</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">Reliable</span>
+            <span class="stat-label">Always accessible</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <span class="pill">Short Link</span>
+          <span class="pill subtle">Copy & Share</span>
+        </div>
+
+        <form id="shorten-form" class="form">
+          <label for="long-url">Paste your long URL</label>
+          <div class="input-row">
+            <input id="long-url" name="longUrl" type="url" placeholder="https://example.com/my-very-long-link" required />
+            <button type="submit" class="primary">Shorten</button>
+          </div>
+          <p class="helper">No login required. Your short link appears below.</p>
+        </form>
+
+        <div id="result" class="result" hidden>
+          <label for="short-url">Your short URL</label>
+          <div class="input-row">
+            <input id="short-url" type="text" readonly />
+            <button type="button" id="copy-btn" class="ghost">Copy</button>
+            <button type="button" id="open-btn" class="primary">Open</button>
+          </div>
+          <div class="result-actions">
+            <button type="button" id="new-btn" class="link">Shorten another URL</button>
+          </div>
+        </div>
+
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>URL Shortner</span>
+      <span class="dot">•</span>
+      <span>Trusted for clean links</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
